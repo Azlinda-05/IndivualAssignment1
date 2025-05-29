@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Path to Success: Achieving Your Career Dreams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5ece9;
+      color: #3e2c2a;
+    }
+
+    nav {
+      background-color: #5c2e2e;
+      padding: 15px 30px;
+      text-align: right;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-image: url("images/BG WALL.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    .section {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .section-card {
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    /* About Me - dark background */
+    .section-card.about-dark {
+      background-color: #5c2e2e;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .section-card.about-dark .section-text h2 {
+      color: #fff;
+    }
+
+    .section-card.about-dark .section-text p {
+      color: #f3e8e8;
+    }
+
+    /* Why I Choose - new blur image background */
+    .section-card.bg-image {
+      background-image: url("images/device tools content creator.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .section-card.bg-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.85);
+      z-index: 0;
+    }
+
+    .section-card.bg-image > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-card img {
+      width: 300px;
+      border-radius: 12px;
+      border: 5px solid #a9746e;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .section-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .section-text h2 {
+      color: #5c2e2e;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .section-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #4a2f2f;
+    }
+
+    .button-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .button-section a {
+      background-color: #a9746e;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .button-section a:hover {
+      background-color: #5c2e2e;
+    }
+
+    footer {
+      background-color: #5c2e2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        text-align: center;
+        padding: 15px;
+      }
+
+      .section {
+        padding: 40px 20px;
+      }
+
+      .section-card {
+        flex-direction: column;
+      }
+
+      .section-card img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="Index.html">Home</a>
+    <a href="Steps.html">Step By Step Guide</a>
+    <a href="Inspiration.html">Inspiration & Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero Header -->
+  <header>
+    <h1>The Path to Success: Achieving Your Career Dreams</h1>
+    <p>Crafting Compelling Stories: The Path to Becoming a Digital Content Creator</p>
+  </header>
+
+  <!-- About Me Section -->
+  <section class="section">
+    <div class="section-card about-dark">
+      <img src="images/about-azlindawati.jpg" alt="Azlindawati Profile Picture" />
+      <div class="section-text">
+        <h2>About Me</h2>
+        <p>Hello! My name is <strong>Azlindawati Binti Abdullah</strong>, and I aspire to become a successful digital content creator. I believe in the power of storytelling through videos, social media, and digital platforms. My goal is to inspire and connect with people through creative and meaningful content that leaves a lasting impression.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why I Choose This Path Section -->
+  <section class="section">
+    <div class="section-card bg-image">
+      <img src="images/device tools content creator.jpg" alt="Digital Creator Inspiration Image" />
+      <div class="section-text">
+        <h2>Why I Choose This Path</h2>
+        <p>Have you ever watched a video or scrolled through a post that made you smile, think, or feel inspired? That’s the magic I want to create! ✨<br><br>As a digital content creator, I get to blend creativity, storytelling, and technology all in one exciting career. From editing videos to crafting the perfect social media post, every day is a chance to share impactful stories and connect meaningfully with others. 💡</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learn More Button -->
+  <div class="button-section">
+    <a href="about.html">Learn More About My Journey</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Azlindawati Binti Abdullah | All Rights Reserved
+  </footer>
+
+</body>
+</html>
