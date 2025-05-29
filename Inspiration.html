@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inspiration & Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5ece9;
+      color: #3e2c2a;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #5c2e2e;
+      padding: 15px 30px;
+      text-align: right;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a9746e;
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background-image: url("images/eksesori content.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 50px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 1.2px;
+    }
+
+    /* Main container */
+    main.container {
+      max-width: 960px;
+      margin: 40px auto 80px;
+      padding: 0 15px;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      color: #4a2f2f;
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Slider container */
+    .slider-container {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto 60px;
+      overflow: hidden;
+    }
+    .scroll-container {
+      display: flex;
+      gap: 30px;
+      transition: transform 0.4s ease;
+    }
+
+    /* Card */
+    .influencer-card {
+      flex: 0 0 550px; /* fixed width */
+      background-color: #fff7f5;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(92, 46, 46, 0.12);
+      display: flex;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .influencer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(92, 46, 46, 0.25);
+    }
+
+    /* Image container */
+    .img-container {
+      flex: 0 0 160px;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      overflow: hidden;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    }
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .influencer-card:hover .img-container img {
+      transform: scale(1.05);
+    }
+
+    /* Text container */
+    .text-container {
+      padding: 20px 25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .influencer-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #5c2e2e;
+      margin-bottom: 12px;
+    }
+
+    .influencer-desc {
+      font-size: 1rem;
+      color: #5c2e2e;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    /* Instagram button */
+    .btn-instagram {
+      align-self: start;
+      background-color: #a9746e;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 3px 7px rgba(169,116,110,0.7);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-instagram:hover {
+      background-color: #5c2e2e;
+      box-shadow: 0 5px 15px rgba(92,46,46,0.8);
+    }
+
+    /* Slider arrows */
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #5c2e2e;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 3px 7px rgba(92,46,46,0.7);
+      transition: background-color 0.3s ease;
+      user-select: none;
+      z-index: 5;
+    }
+    .arrow-btn:hover {
+      background-color: #a9746e;
+    }
+    .arrow-left {
+      left: 5px;
+    }
+    .arrow-right {
+      right: 5px;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #5c2e2e;
+      box-shadow: 0 6px 15px rgba(92, 46, 46, 0.1);
+      background-color: #fff7f5;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    thead {
+      background-color: #a9746e;
+      color: white;
+    }
+    th, td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #e4d6d2;
+      text-align: left;
+    }
+    tbody tr:hover {
+      background-color: #f0e5e3;
+    }
+    a.table-link {
+      color: #5c2e2e;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px dotted #5c2e2e;
+      transition: color 0.3s ease;
+    }
+    a.table-link:hover {
+      color: #a9746e;
+      border-bottom: 1px solid #a9746e;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #5c2e2e;
+      color: white;
+      text-align: center;
+      padding: 18px 20px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .influencer-card {
+        flex: 0 0 90vw;
+        flex-direction: column;
+      }
+      .img-container {
+        flex: none;
+        height: 220px;
+        border-radius: 16px 16px 0 0;
+      }
+      .text-container {
+        padding: 20px;
+      }
+      /* Hide arrows on mobile */
+      .arrow-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html">Home</a>
+    <a href="Steps.html">Step By Step Guide</a>
+    <a href="Inspiration.html">Inspiration & Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    Inspiration & Resources
+  </header>
+
+  <main class="container">
+    <p class="intro-text">
+      These are the creators and icons who constantly fuel my journey. I admire their content, drive, and creative strategy — they've shaped the way I envision my own career. ✨
+    </p>
+
+    <!-- Slider with arrows -->
+    <div class="slider-container">
+      <button class="arrow-btn arrow-left" aria-label="Previous influencer">&#8592;</button>
+      <div class="scroll-container" id="slider">
+        <div class="influencer-card">
+          <div class="img-container">
+            <img src="images/Khairul Aming.jpg" alt="Khairul Aming" />
+          </div>
+          <div class="text-container">
+            <div class="influencer-name">🍳 Khairul Aming</div>
+            <div class="influencer-desc">
+              Popular content creator known for his engaging food videos, inspiring culinary creativity, and entrepreneurial insights that motivate aspiring chefs.
+            </div>
+            <a class="btn-instagram" href="https://www.instagram.com/khairulaming/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+
+        <div class="influencer-card">
+          <div class="img-container">
+            <img src="images/Hanis Zalikha.jpg" alt="Hanis Zalikha" />
+          </div>
+          <div class="text-container">
+            <div class="influencer-name">🌸 Hanis Zalikha</div>
+            <div class="influencer-desc">
+              Lifestyle influencer and entrepreneur, admired for her authentic storytelling, family-oriented content, and empowering women through her platforms.
+            </div>
+            <a class="btn-instagram" href="https://www.instagram.com/haniszalikha/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+
+        <div class="influencer-card">
+          <div class="img-container">
+            <img src="images/Sofea Shra.jpeg" alt="Sofea Shra" />
+          </div>
+          <div class="text-container">
+            <div class="influencer-name">🎬 Sofea Shra</div>
+            <div class="influencer-desc">
+              Emerging content creator focusing on relatable daily vlogs and beauty tips, building a loyal and engaged audience with her genuine personality.
+            </div>
+            <a class="btn-instagram" href="https://www.instagram.com/sofeashra/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+
+        <div class="influencer-card">
+          <div class="img-container">
+            <img src="images/Pin Yang.jpeg" alt="Pin Yang" />
+          </div>
+          <div class="text-container">
+            <div class="influencer-name">🧠 Pin Yang</div>
+            <div class="influencer-desc">
+              A rising star in content creation, known for insightful educational videos and thought-provoking posts that challenge perspectives.
+            </div>
+            <a class="btn-instagram" href="https://www.instagram.com/pinyang.id/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <button class="arrow-btn arrow-right" aria-label="Next influencer">&#8594;</button>
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Official Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Khairul Aming</td>
+          <td>Food Content Creator</td>
+          <td><a class="table-link" href="https://www.instagram.com/khairulaming/" target="_blank" rel="noopener noreferrer">Instagram</a></td>
+        </tr>
+        <tr>
+          <td>Hanis Zalikha</td>
+          <td>Lifestyle Influencer & Entrepreneur</td>
+          <td><a class="table-link" href="https://www.instagram.com/haniszalikha/" target="_blank" rel="noopener noreferrer">Instagram</a></td>
+        </tr>
+        <tr>
+          <td>Sofea Shra</td>
+          <td>Content Creator & Vlogger</td>
+          <td><a class="table-link" href="https://www.instagram.com/sofeashra/" target="_blank" rel="noopener noreferrer">Instagram</a></td>
+        </tr>
+        <tr>
+          <td>Pin Yang</td>
+          <td>Educational Content Creator</td>
+          <td><a class="table-link" href="https://www.instagram.com/pinyang.id/" target="_blank" rel="noopener noreferrer">Instagram</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <footer>
+    &copy; 2025 YourName. All rights reserved.
+  </footer>
+
+  <script>
+    const slider = document.getElementById('slider');
+    const btnLeft = document.querySelector('.arrow-left');
+    const btnRight = document.querySelector('.arrow-right');
+    const cardWidth = 550 + 30; // card width + gap
+
+    let scrollPosition = 0;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    btnRight.addEventListener('click', () => {
+      scrollPosition += cardWidth;
+      if (scrollPosition > maxScroll) scrollPosition = maxScroll;
+      slider.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+
+    btnLeft.addEventListener('click', () => {
+      scrollPosition -= cardWidth;
+      if (scrollPosition < 0) scrollPosition = 0;
+      slider.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+  </script>
+
+</body>
+</html>
